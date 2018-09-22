@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>FastTrack - Fastest Parcel Shipping in AU</title>
+    </h:head>
+    <h:body>
+        <h1 style="color:blue; text-align:center;">FastTrack</h1>
+        <h3 style="text-align:center;">Fastest Parcel Shipping in AU</h3>
+        <hr></hr>
+        <h2><h:outputLink value="/ED-FASTSHIP-war/faces/client/home.xhtml">Client Home Page</h:outputLink> 
+            > Display My Parcel</h2>
+        <hr></hr>
+            <h:form>
+
+                <table border="1">
+                    <tbody>
+                        <tr>
+                            <td>Tracking No</td>
+                            <td>Status</td>
+                            <td>Sender Id</td>
+                            <td>Receiver Id</td>
+                            <td>Volume</td>
+                            <td>Weight</td>
+                            <td>Service</td>
+                            <td>Payment Id</td>
+                        </tr>
+                        <ui:repeat var="p" value="#{sessionManagedBean.parcelList}">
+                            <tr>
+                                <td>#{p.trackingNo}</td>
+                                <td>Delivered</td>
+                                <td>#{p.fromClientId}</td>
+                                <td>#{p.toClientId}</td>
+                                <td>#{p.volume}</td>
+                                <td>#{p.weight}</td>
+                                <td>#{p.service}</td>
+                                <td>#{p.paymentId}</td>
+                            </tr>
+                        </ui:repeat>
+                    </tbody>
+                </table>
+            </h:form>
+            <hr></hr>
+            <h:form>
+                Click <h:commandButton value="Logout" action="#{sessionManagedBean.performLogout()}"/>           
+            </h:form>
+    </h:body>
+</html>
+

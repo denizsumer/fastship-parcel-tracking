@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://ws.fastship.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws.fastship.com/">
+
+<xs:element name="EventDTO" type="tns:eventDTO"/>
+
+<xs:element name="ParcelDTO" type="tns:parcelDTO"/>
+
+<xs:element name="PaymentDTO" type="tns:paymentDTO"/>
+
+<xs:element name="displayEventsForParcel" type="tns:displayEventsForParcel"/>
+
+<xs:element name="displayEventsForParcelResponse" type="tns:displayEventsForParcelResponse"/>
+
+<xs:element name="displayParcel" type="tns:displayParcel"/>
+
+<xs:element name="displayParcelForClient" type="tns:displayParcelForClient"/>
+
+<xs:element name="displayParcelForClientResponse" type="tns:displayParcelForClientResponse"/>
+
+<xs:element name="displayParcelResponse" type="tns:displayParcelResponse"/>
+
+<xs:element name="displayPayment" type="tns:displayPayment"/>
+
+<xs:element name="displayPaymentForClient" type="tns:displayPaymentForClient"/>
+
+<xs:element name="displayPaymentForClientResponse" type="tns:displayPaymentForClientResponse"/>
+
+<xs:element name="displayPaymentResponse" type="tns:displayPaymentResponse"/>
+
+<xs:complexType name="displayPaymentForClient">
+<xs:sequence>
+<xs:element name="clientId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="displayPaymentForClientResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:paymentDTO" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="paymentDTO">
+<xs:sequence>
+<xs:element name="paymentId" type="xs:string"/>
+<xs:element name="debtor" type="xs:string"/>
+<xs:element name="amount" type="xs:decimal"/>
+<xs:element name="isPaid" type="xs:boolean"/>
+<xs:element name="reference" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="displayPayment">
+<xs:sequence>
+<xs:element name="paymentId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="displayPaymentResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:paymentDTO" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="displayParcelForClient">
+<xs:sequence>
+<xs:element name="clientId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="displayParcelForClientResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:parcelDTO" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="parcelDTO">
+<xs:sequence>
+<xs:element name="trackingNo" type="xs:string"/>
+<xs:element name="fromClientId" type="xs:string"/>
+<xs:element name="toClientId" type="xs:string"/>
+<xs:element name="volume" type="xs:int"/>
+<xs:element name="weight" type="xs:int"/>
+<xs:element name="paymentId" type="xs:string"/>
+<xs:element name="service" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="displayEventsForParcel">
+<xs:sequence>
+<xs:element name="trackingNo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="displayEventsForParcelResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:eventDTO" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eventDTO">
+<xs:sequence>
+<xs:element name="eventId" type="xs:string"/>
+<xs:element name="eventTime" type="xs:dateTime"/>
+<xs:element name="trackingNo" type="xs:string"/>
+<xs:element name="location" type="xs:string"/>
+<xs:element name="status" type="xs:string"/>
+<xs:element name="activity" type="xs:string"/>
+<xs:element name="additionalInfo" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="displayParcel">
+<xs:sequence>
+<xs:element name="trackingNo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="displayParcelResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:parcelDTO" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

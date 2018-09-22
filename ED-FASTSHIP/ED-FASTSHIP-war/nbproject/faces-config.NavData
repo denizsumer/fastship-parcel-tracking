@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Project" version="2">
+    <Scope Scope="Faces Configuration Only"/>
+    <Scope Scope="Project">
+        <Node id="trackParcel/trackParcel.xhtml" x="316" y="392" zoom="true"/>
+        <Node id="index.xhtml" x="400" y="150" zoom="true"/>
+        <Node id="logout.xhtml" x="150" y="300" zoom="true"/>
+        <Node id="authorizationFailure.xhtml" x="400" y="300" zoom="true"/>
+        <Node id="login.xhtml" x="150" y="150" zoom="true"/>
+        <Node id="client/pickupParcel.xhtml" x="900" y="150" zoom="true"/>
+        <Node id="retryLogin.xhtml" x="650" y="300" zoom="true"/>
+        <Node id="client/displayPayment.xhtml" x="650" y="150" zoom="true"/>
+        <Node id="trackParcel/trackParcelSuccess.xhtml" x="65" y="511" zoom="true"/>
+        <Node id="client/displayParcel.xhtml" x="1150" y="150" zoom="true"/>
+        <Node id="trackParcel/trackParcelFailure.xhtml" x="436" y="515" zoom="true"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations"/>
+</Scene>

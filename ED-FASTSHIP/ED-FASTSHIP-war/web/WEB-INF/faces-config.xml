@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+    <!-- =========== TRACK PARCEL ================================== -->
+    <navigation-rule>
+        <description>Track Parcel</description>
+        <from-view-id>/trackParcel/trackParcel.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/trackParcel/trackParcelSuccess.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>failure</from-outcome>
+            <to-view-id>/trackParcel/trackParcelFailure.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+        <!-- =========== NEW CLIENT ================================== -->
+    <navigation-rule>
+        <description>Create Client</description>
+        <from-view-id>/newAccount/createAccount.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>createAccountSuccess.xhtml</from-outcome>
+            <to-view-id>/newAccount/createAccountSuccess.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>createAccountFailure</from-outcome>
+            <to-view-id>/newAccount/createAccountFailure.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <!-- =========== CLIENT ================================== -->
+    <navigation-rule>
+        <description>Client Display My Parcel</description>
+        <from-view-id>/client/home.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>displayParcel.xhtml</from-outcome>
+            <to-view-id>/client/displayParcel.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>displayParcelNone.xhtml</from-outcome>
+            <to-view-id>/client/displayParcelNone.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <description>Client Display My Payment</description>
+        <from-view-id>/client/home.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>displayPayment.xhtml</from-outcome>
+            <to-view-id>/client/displayPayment.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>displayPaymentNone.xhtml</from-outcome>
+            <to-view-id>/client/displayPaymentNone.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <description>Client Display My Details</description>
+        <from-view-id>/client/home.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>displayDetail.xhtml</from-outcome>
+            <to-view-id>/client/displayDetail.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <description>Pickup My Parcel</description>
+        <from-view-id>/client/home.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>pickupParcel.xhtml</from-outcome>
+            <to-view-id>/client/pickupParcel.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <description>Pickup My Parcel Confirm</description>
+        <from-view-id>/client/pickupParcel.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>pickupParcel.xhtml</from-outcome>
+            <to-view-id>/client/pickupParcelConfirm.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <!-- =========== LOGOUT  ================================== -->
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>logout.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+
+
+
+
+
+</faces-config>

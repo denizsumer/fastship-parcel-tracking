@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>FastTrack - Fastest Parcel Shipping in AU</title>
+    </h:head>
+    <h:body>
+        <h1 style="color:blue; text-align:center;">FastTrack</h1>
+        <h3 style="text-align:center;">Fastest Parcel Shipping in AU</h3>
+        <hr></hr>
+        <h2>Create Account</h2>
+        <hr></hr>
+
+        <h:form>
+            <table>
+                <tbody>
+
+                    <tr>
+                        <td>
+                            <h:outputLabel value="Username"/>
+                        </td>
+                        <td>
+                            <h:inputText title="Username" id="username"
+                                         required="true" 
+                                         requiredMessage="Username field must be filled"
+                                         maxlength="32" 
+                                         value="#{parcelManagedBean.clUsername}">
+                                <f:validateLength minimum="1" maximum="32"/>
+                            </h:inputText>
+                        </td>
+                        <td>
+                            <h:message for="username" style="color:red"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h:outputLabel value="Password"/>
+                        </td>
+                        <td>
+                            <h:inputSecret title="Password" id="password"
+                                           required="true" 
+                                           requiredMessage="Password field must be filled"
+                                           maxlength="32" 
+                                           value="#{parcelManagedBean.clPassword}">
+                                <f:validateLength minimum="1" maximum="32"/>
+                            </h:inputSecret>
+                        </td>
+                        <td>
+                            <h:message for="password" style="color:red"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h:outputLabel value="Confirm Password"/>
+                        </td>
+                        <td>
+                            <h:inputSecret title="Confirm Password" id="cPassword"
+                                           required="true" 
+                                           requiredMessage="Confirm Password field must be filled"
+                                           maxlength="32" 
+                                           value="#{parcelManagedBean.clCPassword}">
+                                <f:validateLength minimum="1" maximum="32"/>
+                            </h:inputSecret>
+                        </td>
+                        <td>
+                            <h:message for="cPassword" style="color:red"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h:outputLabel value="Name:"/>
+                        </td>
+                        <td>
+                            <h:inputText title="Name" id="name"
+                                         required="true" 
+                                         requiredMessage="Name field must be filled"
+                                         maxlength="32" 
+                                         value="#{parcelManagedBean.clName}">
+                                <f:validateLength minimum="1" maximum="32"/>
+                            </h:inputText>
+                        </td>
+                        <td>
+                            <h:message for="name" style="color:red"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h:outputLabel value="Person in Contact:"/>
+                        </td>
+                        <td>
+                            <h:inputText title="Pic" id="pic"
+                                         maxlength="32" 
+                                         value="#{parcelManagedBean.clPic}">
+                                <f:validateLength minimum="0" maximum="32"/>
+                            </h:inputText>
+                        </td>
+                        <td>
+                            <h:message for="pic" style="color:red"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h:outputLabel value="Phone"/>
+                        </td>
+                        <td>
+                            <h:inputText title="Phone" id="phone"
+                                         required="true" 
+                                         requiredMessage="Phone field must be filled"
+                                         maxlength="32" 
+                                         value="#{parcelManagedBean.clPhone}">
+                                <f:validateLength minimum="1" maximum="32"/>
+                            </h:inputText>
+                        </td>
+                        <td>
+                            <h:message for="phone" style="color:red"/>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <h:outputLabel value="Address"/>
+                        </td>
+                        <td>
+                            <h:inputText title="Address" id="address"
+                                         required="true" 
+                                         requiredMessage="Address field must be filled"
+                                         maxlength="128" 
+                                         value="#{parcelManagedBean.clAddress}">
+                                <f:validateLength minimum="1" maximum="128"/>
+                            </h:inputText>
+                        </td>
+                        <td>
+                            <h:message for="address" style="color:red"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h:outputLabel value="Email"/>
+                        </td>
+                        <td>
+                            <h:inputText title="Email" id="email"
+                                         required="true" 
+                                         requiredMessage="Email field must be filled"
+                                         maxlength="32" 
+                                         value="#{parcelManagedBean.clEmail}">
+                                <f:validateLength minimum="1" maximum="32"/>
+                            </h:inputText>
+                        </td>
+                        <td>
+                            <h:message for="email" style="color:red"/>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <p></p>
+
+            <h:commandButton id="submit" value="Submit" 
+                             action="#{parcelManagedBean.addClient()}"/>
+
+        </h:form>
+
+        <hr></hr>
+
+        Click <h:outputLink value="../index.xhtml">here</h:outputLink>
+        to return to the Home Page
+
+    </h:body>
+</html>
+
